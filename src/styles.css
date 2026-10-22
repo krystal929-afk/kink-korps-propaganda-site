@@ -1,0 +1,221 @@
+@import "tailwindcss";
+@import "@fontsource/bebas-neue/latin-400.css";
+@import "@fontsource/libre-franklin/latin-400.css";
+@import "@fontsource/libre-franklin/latin-500.css";
+@import "@fontsource/libre-franklin/latin-600.css";
+@import "@fontsource/libre-franklin/latin-700.css";
+@import "@fontsource/libre-franklin/latin-400-italic.css";
+@import "@fontsource/libre-franklin/latin-600-italic.css";
+
+@theme {
+  --color-paper: #f2e6cf;
+  --color-paper-deep: #e4d5b8;
+  --color-ink: #14110e;
+  --color-ink-soft: #3d342c;
+  --color-scarlet: #d1232a;
+  --color-scarlet-deep: #8b0e14;
+  --color-navy: #1a3f7a;
+  --color-cream: #f6edd9;
+  --font-display: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
+  --font-sans: "Libre Franklin", "Franklin Gothic", system-ui, sans-serif;
+  --shadow-print: 4px 4px 0 0 var(--color-ink);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: clip;
+    background: var(--color-paper);
+    background-image: radial-gradient(rgba(20, 17, 14, 0.055) 0.55px, transparent 0.65px);
+    background-size: 3px 3px;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.5;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-scarlet);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-scarlet);
+    color: var(--color-paper);
+  }
+}
+
+@layer components {
+  .font-display {
+    letter-spacing: 0.02em;
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  .display-xl {
+    font-family: var(--font-display);
+    font-size: clamp(4.25rem, 12vw, 8rem);
+    line-height: 0.8;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
+  .display-lg {
+    font-family: var(--font-display);
+    font-size: clamp(2.75rem, 8vw, 5.25rem);
+    line-height: 0.86;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .kicker {
+    font-family: var(--font-display);
+    letter-spacing: 0.16em;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .grain {
+    position: relative;
+  }
+
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.14;
+    background-image: radial-gradient(var(--color-ink) 0.55px, transparent 0.6px);
+    background-size: 4px 4px;
+    mix-blend-mode: multiply;
+  }
+
+  .stamp {
+    display: inline-grid;
+    place-items: center;
+    border: 3px solid var(--color-scarlet);
+    padding: 0.35rem 0.7rem;
+    color: var(--color-scarlet-deep);
+    font-family: var(--font-display);
+    line-height: 0.9;
+    text-align: center;
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+  }
+
+  .red-rule {
+    display: block;
+    height: 0.35rem;
+    width: 4.75rem;
+    background: var(--color-scarlet);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-areas:
+      "copy"
+      "actions"
+      "photos";
+  }
+
+  .hero-copy {
+    grid-area: copy;
+  }
+
+  .hero-photos {
+    position: relative;
+    grid-area: photos;
+  }
+
+  .hero-copy {
+    min-width: 0;
+  }
+
+  .hero-actions {
+    grid-area: actions;
+  }
+
+  .hero-shot {
+    aspect-ratio: 3 / 4;
+  }
+
+  .face {
+    object-position: center 16%;
+  }
+
+  .room-crop {
+    object-position: center 12%;
+  }
+
+  .ratio-poster {
+    aspect-ratio: 3 / 4;
+  }
+
+  .ratio-room {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+
+  .flyer-frame {
+    max-height: 36rem;
+    background: var(--color-ink);
+  }
+
+  .lightbox-img {
+    width: auto;
+    max-width: min(100%, 40rem);
+    max-height: 82dvh;
+    object-fit: contain;
+  }
+
+  @media (min-width: 64rem) {
+    .hero-grid {
+      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-areas:
+        "copy photos"
+        "actions photos";
+    }
+
+    .hero-shot {
+      position: absolute;
+      inset: 0;
+      aspect-ratio: auto;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .stamp {
+    transform: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
