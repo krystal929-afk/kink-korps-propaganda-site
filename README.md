@@ -20,9 +20,15 @@ npm run build
 
 Both commands passed during the October 22, 2026 import. Browser verification remains pending because the local Playwright Chromium executable was unavailable.
 
-## Deployment
+## GitHub Pages preview
 
-The supplied project uses React, TanStack Start, Vite, Tailwind CSS and a Vercel server-rendered build. Connect this repository to a separate Vercel project when ready to preview or publish it. It is not configured as a GitHub Pages static site. No hosting or domain settings were changed during import.
+Run `npm run build:pages` to refresh the committed `docs/` preview. In repository Settings → Pages, select Deploy from a branch, `main`, and `/docs`. GitHub Free requires this repository to be public.
+
+Expected preview URL (after enabling Pages): https://krystal929-afk.github.io/kink-korps-propaganda-site/
+
+This separate browser-only build preserves the page artwork and personal-plan interactions. It uses the repository URL prefix for images and fonts and asks search engines not to index the preview. There is no CNAME file or custom-domain change. The original server build remains available via `npm run build`.
+
+After editing source, rebuild and commit `docs/` along with the source changes to update the preview.
 
 ## Content and behavior
 

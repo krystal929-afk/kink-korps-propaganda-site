@@ -32,7 +32,7 @@ type Sheet = {
 
 const SHEETS: Sheet[] = [
   {
-    src: "/media/poster-needs-you.jpg",
+    src: `${import.meta.env.BASE_URL}media/poster-needs-you.jpg`,
     title: "The Korps needs you",
     detail: "A finger, and the order.",
     alt: "Poster. A woman in black latex points forward. Type reads: The Korps needs you. Enlist now.",
@@ -40,7 +40,7 @@ const SHEETS: Sheet[] = [
     height: 1168,
   },
   {
-    src: "/media/poster-needs-hood.jpg",
+    src: `${import.meta.env.BASE_URL}media/poster-needs-hood.jpg`,
     title: "Needs you",
     detail: "The hooded call.",
     alt: "Poster. A figure in a black latex hood points at you. Type reads: The Korps needs you. Enlist now.",
@@ -48,7 +48,7 @@ const SHEETS: Sheet[] = [
     height: 1168,
   },
   {
-    src: "/media/poster-floor.jpg",
+    src: `${import.meta.env.BASE_URL}media/poster-floor.jpg`,
     title: "The floor calls",
     detail: "Enlist in the Kink Korps.",
     alt: "Poster. A woman in black latex raises one hand under a red sky. Type reads: The floor calls. Enlist in the Kink Korps.",
@@ -56,7 +56,7 @@ const SHEETS: Sheet[] = [
     height: 1168,
   },
   {
-    src: "/media/poster-we-can.jpg",
+    src: `${import.meta.env.BASE_URL}media/poster-we-can.jpg`,
     title: "We can do it",
     detail: "Corset and a fist.",
     alt: "Poster in a navy circle. A masked woman in a corset and red bandana flexes. Type reads: We can do it. Kink Korps.",
@@ -64,7 +64,7 @@ const SHEETS: Sheet[] = [
     height: 1168,
   },
   {
-    src: "/media/poster-we-can-harness.jpg",
+    src: `${import.meta.env.BASE_URL}media/poster-we-can-harness.jpg`,
     title: "We can do it",
     detail: "Harness and a fist.",
     alt: "Poster in a navy circle. A masked woman in a leather harness and red bandana flexes. Type reads: We can do it. Kink Korps.",
@@ -72,7 +72,7 @@ const SHEETS: Sheet[] = [
     height: 1168,
   },
   {
-    src: "/media/poster-enlist-bar.jpg",
+    src: `${import.meta.env.BASE_URL}media/poster-enlist-bar.jpg`,
     title: "Enlist",
     detail: "The red bar.",
     alt: "Poster. A woman in sunglasses and a red collar stands behind a red bar. Type reads: Enlist. Kink Korps.",
@@ -80,7 +80,7 @@ const SHEETS: Sheet[] = [
     height: 1728,
   },
   {
-    src: "/media/poster-enlisted.jpg",
+    src: `${import.meta.env.BASE_URL}media/poster-enlisted.jpg`,
     title: "Have you enlisted?",
     detail: "The red slash.",
     alt: "Poster with a red slash. A latex glove points, a hooded profile, and a boot. Type reads: Have you enlisted? Kink Korps.",
@@ -88,7 +88,7 @@ const SHEETS: Sheet[] = [
     height: 1168,
   },
   {
-    src: "/media/poster-fist.jpg",
+    src: `${import.meta.env.BASE_URL}media/poster-fist.jpg`,
     title: "Enlist",
     detail: "The raised fist.",
     alt: "Poster. A black-gloved fist with a red cuff. Type reads: Enlist. Kink Korps.",
@@ -96,7 +96,7 @@ const SHEETS: Sheet[] = [
     height: 1168,
   },
   {
-    src: "/media/poster-heel.jpg",
+    src: `${import.meta.env.BASE_URL}media/poster-heel.jpg`,
     title: "Enlist",
     detail: "The red sole.",
     alt: "Poster. A black pump with a red sole. Type reads: Enlist. Kink Korps.",
@@ -104,7 +104,7 @@ const SHEETS: Sheet[] = [
     height: 1168,
   },
   {
-    src: "/media/poster-mask.jpg",
+    src: `${import.meta.env.BASE_URL}media/poster-mask.jpg`,
     title: "Enlist",
     detail: "The mask, in profile.",
     alt: "Poster. A masked woman in profile against a red circle. Type reads: Enlist. Kink Korps.",
@@ -112,7 +112,7 @@ const SHEETS: Sheet[] = [
     height: 1168,
   },
   {
-    src: "/media/poster-hood.jpg",
+    src: `${import.meta.env.BASE_URL}media/poster-hood.jpg`,
     title: "Enlist",
     detail: "The hood, in profile.",
     alt: "Poster. A latex hood in profile against a red circle. Type reads: Enlist. Kink Korps.",
@@ -123,7 +123,7 @@ const SHEETS: Sheet[] = [
 
 const FIELD: Sheet[] = [
   {
-    src: "/media/enlist-poster.jpg",
+    src: `${import.meta.env.BASE_URL}media/enlist-poster.jpg`,
     title: "I want you",
     detail: "The first enlistment sheet.",
     alt: "Poster. A figure in a full black latex suit points at you. Type reads: I want you for the Kink Korps. Enlist now.",
@@ -131,7 +131,7 @@ const FIELD: Sheet[] = [
     height: 1728,
   },
   {
-    src: "/media/flyer-parlor.png",
+    src: `${import.meta.env.BASE_URL}media/flyer-parlor.png`,
     title: "Parlor",
     detail: "Candles, wine, and the raven.",
     alt: "Anything Goes parlor flyer. Candles, wine, and a raven.",
@@ -139,7 +139,7 @@ const FIELD: Sheet[] = [
     height: 1402,
   },
   {
-    src: "/media/flyer-gate.png",
+    src: `${import.meta.env.BASE_URL}media/flyer-gate.png`,
     title: "The gate",
     detail: "Both hosts, under the moon.",
     alt: "Anything Goes gate flyer. Both hosts under the moon.",
@@ -147,7 +147,7 @@ const FIELD: Sheet[] = [
     height: 1536,
   },
   {
-    src: "/media/flyer-coven.png",
+    src: `${import.meta.env.BASE_URL}media/flyer-coven.png`,
     title: "Coven",
     detail: "The hall, the hats, the night.",
     alt: "Anything Goes coven flyer. The hall and the hats.",
@@ -155,7 +155,7 @@ const FIELD: Sheet[] = [
     height: 1402,
   },
   {
-    src: "/media/flyer-field.png",
+    src: `${import.meta.env.BASE_URL}media/flyer-field.png`,
     title: "Field sheet",
     detail: "Address, hours, and cover.",
     alt: "Anything Goes field sheet with the address, hours, and cover.",
@@ -163,7 +163,7 @@ const FIELD: Sheet[] = [
     height: 1091,
   },
   {
-    src: "/media/flyer-mark.jpg",
+    src: `${import.meta.env.BASE_URL}media/flyer-mark.jpg`,
     title: "The mark",
     detail: "Friendly. Inclusive. Pure kink.",
     alt: "Kink Korps mark flyer. Friendly, inclusive, pure kink.",
@@ -232,7 +232,7 @@ function Masthead() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-3 py-2">
         <a href="#top" className="min-w-0">
           <img
-            src="/media/kk-logo.png"
+            src={`${import.meta.env.BASE_URL}media/kk-logo.png`}
             alt="Kink Korps"
             width={680}
             height={600}
@@ -512,7 +512,7 @@ function Night() {
           </dl>
           <div className="mt-6 flex flex-col items-start gap-4 border-4 border-ink bg-paper p-4 sm:flex-row sm:items-center">
             <img
-              src="/media/nu-vibez.jpg"
+              src={`${import.meta.env.BASE_URL}media/nu-vibez.jpg`}
               alt="Nu Vibez logo"
               width={1536}
               height={1103}
@@ -579,7 +579,7 @@ function Hosts() {
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           <article className="border-4 border-ink bg-paper shadow-print">
             <img
-              src="/media/mr-satan.jpg"
+              src={`${import.meta.env.BASE_URL}media/mr-satan.jpg`}
               alt="Mr. Satan, co-host and DJ"
               width={1001}
               height={1252}
@@ -597,7 +597,7 @@ function Hosts() {
           </article>
           <article className="border-4 border-ink bg-paper shadow-print">
             <img
-              src="/media/satanica.jpg"
+              src={`${import.meta.env.BASE_URL}media/satanica.jpg`}
               alt="Satanica Lux, co-host and door diva"
               width={1328}
               height={1488}
@@ -910,7 +910,7 @@ function SiteFooter() {
       <div className="mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div className="flex items-center gap-3">
           <img
-            src="/media/kk-logo.png"
+            src={`${import.meta.env.BASE_URL}media/kk-logo.png`}
             alt=""
             width={680}
             height={600}
