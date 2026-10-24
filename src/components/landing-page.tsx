@@ -17,7 +17,6 @@ const NAV = [
   { href: "#night", label: "The Night" },
   { href: "#hosts", label: "Hosts" },
   { href: "#code", label: "The Code" },
-  { href: "#posters", label: "Posters" },
   { href: "#enlist", label: "Enlist" },
 ];
 
@@ -121,57 +120,6 @@ const SHEETS: Sheet[] = [
   },
 ];
 
-const FIELD: Sheet[] = [
-  {
-    src: `${import.meta.env.BASE_URL}media/enlist-poster.jpg`,
-    title: "I want you",
-    detail: "The first enlistment sheet.",
-    alt: "Poster. A figure in a full black latex suit points at you. Type reads: I want you for the Kink Korps. Enlist now.",
-    width: 1152,
-    height: 1728,
-  },
-  {
-    src: `${import.meta.env.BASE_URL}media/flyer-parlor.png`,
-    title: "Parlor",
-    detail: "Candles, wine, and the raven.",
-    alt: "Anything Goes parlor flyer. Candles, wine, and a raven.",
-    width: 1122,
-    height: 1402,
-  },
-  {
-    src: `${import.meta.env.BASE_URL}media/flyer-gate.png`,
-    title: "The gate",
-    detail: "Both hosts, under the moon.",
-    alt: "Anything Goes gate flyer. Both hosts under the moon.",
-    width: 1024,
-    height: 1536,
-  },
-  {
-    src: `${import.meta.env.BASE_URL}media/flyer-coven.png`,
-    title: "Coven",
-    detail: "The hall, the hats, the night.",
-    alt: "Anything Goes coven flyer. The hall and the hats.",
-    width: 1122,
-    height: 1402,
-  },
-  {
-    src: `${import.meta.env.BASE_URL}media/flyer-field.png`,
-    title: "Field sheet",
-    detail: "Address, hours, and cover.",
-    alt: "Anything Goes field sheet with the address, hours, and cover.",
-    width: 1080,
-    height: 1091,
-  },
-  {
-    src: `${import.meta.env.BASE_URL}media/flyer-mark.jpg`,
-    title: "The mark",
-    detail: "Friendly. Inclusive. Pure kink.",
-    alt: "Kink Korps mark flyer. Friendly, inclusive, pure kink.",
-    width: 1080,
-    height: 1076,
-  },
-];
-
 const needsYou = SHEETS[0];
 const floorCalls = SHEETS[2];
 const weCan = SHEETS[3];
@@ -205,7 +153,6 @@ export function LandingPage() {
         <Hosts />
         <Code />
         <EnlistedBreak />
-        <Posters />
         <Enlist />
         <SiteFooter />
       </div>
@@ -680,49 +627,6 @@ function EnlistedBreak() {
     <section className="bg-ink px-4 py-10" aria-label="Have you enlisted?">
       <div className="mx-auto max-w-sm">
         <OpenPoster sheet={haveYou} />
-      </div>
-    </section>
-  );
-}
-
-function SheetGrid({ sheets }: { sheets: Sheet[] }) {
-  const open = useOpenPoster();
-  return (
-    <ul className="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-3 lg:gap-5">
-      {sheets.map((sheet) => (
-        <li key={sheet.src}>
-          <button type="button" onClick={() => open(sheet)} className="block w-full border-4 border-ink bg-paper text-left shadow-print">
-            <img
-              src={sheet.src}
-              alt={sheet.alt}
-              width={sheet.width}
-              height={sheet.height}
-              loading="lazy"
-              className="w-full"
-            />
-            <span className="block border-t-4 border-ink px-3 py-2">
-              <span className="block font-display text-2xl leading-none sm:text-3xl">{sheet.title}</span>
-              <span className="mt-1 block text-sm text-ink-soft">{sheet.detail}</span>
-            </span>
-          </button>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-function Posters() {
-  return (
-    <section id="posters" className="scroll-mt-24 px-4 py-12 sm:py-16">
-      <div className="mx-auto max-w-6xl">
-        <p className="kicker text-sm text-scarlet-deep">The posters</p>
-        <h2 className="display-lg mt-2">The enlistment sheets</h2>
-        <span className="red-rule mt-4" />
-        <p className="mt-4 max-w-2xl">Tap a sheet to read it full size.</p>
-        <SheetGrid sheets={SHEETS} />
-        <h3 className="mt-12 font-display text-5xl">Field sheets</h3>
-        <p className="mt-2 max-w-2xl">The night, as printed. Address, cover, and the first I-want-you.</p>
-        <SheetGrid sheets={FIELD} />
       </div>
     </section>
   );
