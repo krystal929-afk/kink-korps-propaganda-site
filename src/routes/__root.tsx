@@ -10,13 +10,13 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: `${APP_NAME} — Out of line. In good company.` },
+      { title: `${APP_NAME} — Anything Goes` },
       {
         name: "description",
         content:
-          "Independent alternative nightlife in South Florida. Events, the people behind Kink Korps, and a field guide to your first night.",
+          "Kink Korps presents Anything Goes, a 21+ dance and play party at Nu Vibez in Lauderhill. Friday, October 23, 10 PM. Co-hosted by Mr. Satan and Satanica Lux.",
       },
-      { name: "theme-color", content: "#171916" },
+      { name: "theme-color", content: "#14110e" },
     ],
     links: [
       { rel: "icon", type: "image/png", href: "/favicon.png" },

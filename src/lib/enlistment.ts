@@ -14,7 +14,7 @@ export const NIGHT_BLURB = [
   "Nu Vibez · 1748 NW 38th Ave, Lauderhill",
   "$15 presale · $20 at the door · Free parking",
   "Dress code: fetish, lingerie, goth",
-  "Music by Mr. Satan · Kink Koncierge Satanica Lux",
+  "Music by Mr. Satan · Door diva Satanica Lux",
   "21+ to play · Consent is sexy · Respect is mandatory",
 ].join("\n");
 

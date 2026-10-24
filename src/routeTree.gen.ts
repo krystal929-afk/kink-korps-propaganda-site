@@ -10,102 +10,33 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as EventsRouteImport } from './routes/events'
-import { Route as FieldGuideRouteImport } from './routes/field-guide'
-import { Route as GetInvolvedRouteImport } from './routes/get-involved'
-import { Route as TheKorpsRouteImport } from './routes/the-korps'
-import { Route as EventsAnythingGoesRouteImport } from './routes/events_.anything-goes'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EventsRoute = EventsRouteImport.update({
-  id: '/events',
-  path: '/events',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FieldGuideRoute = FieldGuideRouteImport.update({
-  id: '/field-guide',
-  path: '/field-guide',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GetInvolvedRoute = GetInvolvedRouteImport.update({
-  id: '/get-involved',
-  path: '/get-involved',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TheKorpsRoute = TheKorpsRouteImport.update({
-  id: '/the-korps',
-  path: '/the-korps',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EventsAnythingGoesRoute = EventsAnythingGoesRouteImport.update({
-  id: '/events_/anything-goes',
-  path: '/events/anything-goes',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/events': typeof EventsRoute
-  '/field-guide': typeof FieldGuideRoute
-  '/get-involved': typeof GetInvolvedRoute
-  '/the-korps': typeof TheKorpsRoute
-  '/events/anything-goes': typeof EventsAnythingGoesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/events': typeof EventsRoute
-  '/field-guide': typeof FieldGuideRoute
-  '/get-involved': typeof GetInvolvedRoute
-  '/the-korps': typeof TheKorpsRoute
-  '/events/anything-goes': typeof EventsAnythingGoesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/events': typeof EventsRoute
-  '/field-guide': typeof FieldGuideRoute
-  '/get-involved': typeof GetInvolvedRoute
-  '/the-korps': typeof TheKorpsRoute
-  '/events_/anything-goes': typeof EventsAnythingGoesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/events'
-    | '/field-guide'
-    | '/get-involved'
-    | '/the-korps'
-    | '/events/anything-goes'
+  fullPaths: '/'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/events'
-    | '/field-guide'
-    | '/get-involved'
-    | '/the-korps'
-    | '/events/anything-goes'
-  id:
-    | '__root__'
-    | '/'
-    | '/events'
-    | '/field-guide'
-    | '/get-involved'
-    | '/the-korps'
-    | '/events_/anything-goes'
+  to: '/'
+  id: '__root__' | '/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  EventsRoute: typeof EventsRoute
-  FieldGuideRoute: typeof FieldGuideRoute
-  GetInvolvedRoute: typeof GetInvolvedRoute
-  TheKorpsRoute: typeof TheKorpsRoute
-  EventsAnythingGoesRoute: typeof EventsAnythingGoesRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -117,51 +48,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/events': {
-      id: '/events'
-      path: '/events'
-      fullPath: '/events'
-      preLoaderRoute: typeof EventsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/field-guide': {
-      id: '/field-guide'
-      path: '/field-guide'
-      fullPath: '/field-guide'
-      preLoaderRoute: typeof FieldGuideRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/get-involved': {
-      id: '/get-involved'
-      path: '/get-involved'
-      fullPath: '/get-involved'
-      preLoaderRoute: typeof GetInvolvedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/the-korps': {
-      id: '/the-korps'
-      path: '/the-korps'
-      fullPath: '/the-korps'
-      preLoaderRoute: typeof TheKorpsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/events_/anything-goes': {
-      id: '/events_/anything-goes'
-      path: '/events/anything-goes'
-      fullPath: '/events/anything-goes'
-      preLoaderRoute: typeof EventsAnythingGoesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  EventsRoute: EventsRoute,
-  FieldGuideRoute: FieldGuideRoute,
-  GetInvolvedRoute: GetInvolvedRoute,
-  TheKorpsRoute: TheKorpsRoute,
-  EventsAnythingGoesRoute: EventsAnythingGoesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
